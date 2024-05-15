@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  mongo:
+    build:
+      context: ./devtools/mongo
+      dockerfile: Dockerfile
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 1234g
+    ports:
+      - 27017:27017
