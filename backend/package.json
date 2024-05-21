@@ -1,8 +1,12 @@
 {
   "scripts": {
-    "start": "node dist/server.js",
     "build": "tsc",
-    "dev": "nodemon"
+    "postinstall": "npm run build",
+    "dev": "nodemon",
+    "prestart": "npm run build",
+    "start": "node ./dist/app.js",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",

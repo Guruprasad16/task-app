@@ -4,6 +4,7 @@ import mongooseConnect from "../databases/mongodb/mongodb";
 const appSetup = async (app: Express) => {
   try {
     await mongooseConnect();
+    console.log("Database connected successfully!!!");
 
     const APP_PORT = Number(process.env.APP_PORT) || 3000;
     app.listen(APP_PORT, () => {
