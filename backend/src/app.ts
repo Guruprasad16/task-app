@@ -8,5 +8,5 @@ const app = express();
 dotenv.config();
 
 appSetup(app);
-routerSetup(app);
 securitySetup(app, express);
+routerSetup(app);
