@@ -1,11 +1,11 @@
 import UserModel from "../databases/mongodb/schema/user.schema";
 
 export async function findUsersRepository() {
-  UserModel.find();
+  return UserModel.find();
 }
 
-export async function findUserByIdRepository(id: unknown) {
-  UserModel.findById(id);
+export async function findUserByIdRepository(id: string) {
+  return UserModel.findById(id);
 }
 
 export async function createUserRepository(

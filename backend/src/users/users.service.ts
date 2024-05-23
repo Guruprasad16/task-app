@@ -1,7 +1,17 @@
-import { findUsersRepository, createUserRepository } from "./users.repository";
+import {
+  findUsersRepository,
+  createUserRepository,
+  findUserByIdRepository,
+} from "./users.repository";
 import bcrypt from "bcrypt";
 
-export function findUsersService() {}
+export async function findUsersService() {
+  return await findUsersRepository();
+}
+
+export async function findUserByIdService(id: string) {
+  return await findUserByIdRepository(id);
+}
 
 export async function createUserService(
   username: string,
