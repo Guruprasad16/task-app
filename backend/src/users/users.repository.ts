@@ -1,3 +1,4 @@
+import { IUser } from "../databases/mongodb/model/user.model";
 import UserModel from "../databases/mongodb/schema/user.schema";
 
 export async function findUsersRepository() {
@@ -21,4 +22,12 @@ export async function createUserRepository(
 
   const user = await newUser.save();
   return user;
+}
+
+export async function updateUserRepository(id: string, user: Partial<IUser>) {
+  return UserModel.findOneAndUpdate({ _id: id }, user, { new: true });
+}
+
+export async function deleteUserRepository(id: string) {
+  return UserModel.findOneAndDelete({ _id: id });
 }

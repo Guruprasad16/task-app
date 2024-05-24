@@ -1,7 +1,10 @@
+import { IUser } from "../databases/mongodb/model/user.model";
 import {
   findUsersRepository,
   createUserRepository,
   findUserByIdRepository,
+  updateUserRepository,
+  deleteUserRepository,
 } from "./users.repository";
 import bcrypt from "bcrypt";
 
@@ -23,4 +26,12 @@ export async function createUserService(
   const user = await createUserRepository(username, hashedPwd, email);
 
   return user;
+}
+
+export async function updateUserService(id: string, user: IUser) {
+  return await updateUserRepository(id, user);
+}
+
+export async function deleteUserService(id: string) {
+  return await deleteUserRepository(id);
 }
