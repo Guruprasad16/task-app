@@ -10,3 +10,35 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: 1234g
     ports:
       - 27017:27017
+
+    node:
+      build:
+        context: ./backend
+        dockerfile: Dockerfile
+      container_name: node
+      hostname: node
+      ports:
+        - "3000:3000"
+      expose:
+        - "3000"
+      volumes:
+        - ./backend:/app
+        - node_nodemodules:/app/node_modules
+      environment:
+        - PORT=3000
+        - NODE_ENV=development
+
+      react:
+        build:
+          context: ./frontend
+          dockerfile: Dockerfile
+        container_name: react
+        hostname: react
+        restart: always
+        ports:
+          - "5173:5173"
+        volumes:
+          - ./frontend:/app
+          - react_nodemodules:/app/node_modules
+        environment:
+          - PORT=5173
