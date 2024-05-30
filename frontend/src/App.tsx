@@ -1,7 +1,15 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
 
 function App() {
-  return <h1 className="text-8xl font-bold underline">Hi</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" Component={Login}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
