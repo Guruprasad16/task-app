@@ -1,7 +1,7 @@
 const Login = () => {
   return (
-    <div>
-      <div className="bg-blue-400">
+    <div className="flex  justify-center h-screen items-center">
+      <div className="bg-blue-400 p-2 rounded-md">
         Login
         <div className="">
           <label htmlFor="email"> Email</label>
@@ -10,7 +10,7 @@ const Login = () => {
             name="email"
             id="email"
             placeholder="Username or Email"
-            className="m-2"
+            className="m-5 rounded-md"
           />
         </div>
         <div>
@@ -20,10 +20,10 @@ const Login = () => {
             name="password"
             id="password"
             placeholder="Password"
-            className="m-2"
+            className="m-5 rounded-md"
           />
         </div>
-        <div className="items-center">
+        <div className="flex items-center space-x-10">
           <button>Login</button>
           <button>Signup</button>
         </div>
