@@ -1,0 +1,7 @@
+https://mirzaleka.medium.com/express-js-starter-api-with-typescript-deef5c4b6b70
+https://mirzaleka.medium.com/api-validations-in-express-js-5d1d308dceea
+https://medium.com/@saman.ghm/validation-and-conversion-request-body-in-one-line-for-node-js-with-typescript-6adfac0ccd0a
+https://medium.com/@saman.ghm/token-based-authentication-including-refresh-token-in-node-using-typescript-cd127e0fefcb
+https://medium.com/@ishahmeer/using-typescript-with-node-js-a-comprehensive-guide-cdfbfecf1ba3
+https://medium.com/@anandam00/build-a-secure-authentication-system-with-nodejs-and-mongodb-58accdeb5144
+https://medium.com/geekculture/how-to-authenticate-from-scratch-using-node-js-and-mongodb-505bdd05eec9

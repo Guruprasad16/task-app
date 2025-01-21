@@ -1,0 +1,1 @@
+https://naveenda.medium.com/how-to-structure-your-typescript-react-application-using-cra-ba3074df8b96
